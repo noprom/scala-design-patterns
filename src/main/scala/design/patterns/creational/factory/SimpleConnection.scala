@@ -1,6 +1,7 @@
 package design.patterns.creational.factory
 
 /**
+  * 工厂模式
   *
   * Author: Noprom <tyee.noprom@qq.com>
   * Date: 4/14/16 6:25 AM.
@@ -16,5 +17,13 @@ class SimpleMysqlConnection extends SimpleConnection {
 
   override def executeQuery(query: String): Unit = {
     System.out.println(s"Executing the query '$query' the MySQL way.")
+  }
+}
+
+class SimplePgSqlConnection extends SimpleConnection {
+  override def getName(): String = "SimplePgSqlConnection"
+
+  override def executeQuery(query: String): Unit = {
+    System.out.println(s"Executing the query '$query' the PgSQL way.")
   }
 }
