@@ -31,3 +31,18 @@ class SimplePgSqlConnectionPrinter extends SimpleConnectionPrinter {
   }
 }
 
+class BadMySqlClient extends BadDatabaseClient {
+  override protected def connect(): SimpleConnection = new
+      SimpleMysqlConnection
+
+  override protected def getConnectionPrinter(): SimpleConnectionPrinter =
+    new SimpleMySqlConnectionPrinter
+}
+
+class BadPgSqlClient extends BadDatabaseClient {
+  override protected def connect(): SimpleConnection = new
+      SimplePgSqlConnection
+
+  override protected def getConnectionPrinter(): SimpleConnectionPrinter =
+    new SimplePgSqlConnectionPrinter
+}
