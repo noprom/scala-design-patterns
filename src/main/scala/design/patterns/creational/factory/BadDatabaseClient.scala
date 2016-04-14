@@ -18,3 +18,16 @@ abstract class BadDatabaseClient {
 
   protected def getConnectionPrinter(): SimpleConnectionPrinter
 }
+
+class SimpleMySqlConnectionPrinter extends SimpleConnectionPrinter {
+  override def printSimpleConnection(connection: SimpleConnection): Unit = {
+    System.out.println(s"I require a MySQL connection. It is: ${connection.getName()}'")
+  }
+}
+
+class SimplePgSqlConnectionPrinter extends SimpleConnectionPrinter {
+  override def printSimpleConnection(connection: SimpleConnection): Unit = {
+    System.out.println(s"I require a PgSQL connection. It is: ${connection.getName()}'")
+  }
+}
+
