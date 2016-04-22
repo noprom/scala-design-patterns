@@ -1,6 +1,7 @@
-package design.patterns.creational.factory.abstractfac
+package design.patterns.creationalfactory.abstractfac
 
-import design.patterns.creational.factory.{SimplePgSqlConnection, SimpleMysqlConnection, SimpleConnection}
+import design.patterns.creational.factory.SimplePgSqlConnection
+import design.patterns.creationalfactory.{SimplePgSqlConnection, SimpleMysqlConnection, SimpleConnection}
 
 /**
   * DatabaseConnectorFactory
