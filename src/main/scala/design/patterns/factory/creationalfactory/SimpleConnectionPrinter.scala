@@ -1,4 +1,4 @@
-package design.patterns.creationalfactory
+package design.patterns.factory.creationalfactory
 
 /**
   * SimpleConnectionPrinter

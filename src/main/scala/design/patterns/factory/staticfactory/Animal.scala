@@ -1,4 +1,4 @@
-package design.patterns.staticfactory
+package design.patterns.factory.staticfactory
 
 /**
   * Animal
